@@ -4,9 +4,12 @@ class PostsController < ApplicationController
     @posts = Post.all
     
     # alternative responses to requests other than HTML
-    # respond_to do |format|
-    #   format.html # implicitly renders posts/index.html.erb
-    # end
+    respond_to do |format|
+      format.html # implicitly renders posts/index.html.erb
+      format.json do
+        render :json => @posts
+      end
+    end
   end
 
   def new
