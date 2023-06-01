@@ -24,6 +24,6 @@ test:
 production:
   <<: *default
   adapter: postgresql
-#   database: my_app_production
-#   username: my_app
-#   password: <%= ENV["MY_APP_DATABASE_PASSWORD"] %>
+  database: tacostagram-lk_production
+  username: tacostagram-lk
+  password: <%= ENV["TACOSTAGRAM-LK_DATABASE_PASSWORD"] %>
